@@ -15,7 +15,7 @@ options = Options()
 # print(user_agent)
 # options.add_argument(f'user-agent={user_agent}')
 
-driver = webdriver.Chrome('/home/abhay/webscraping/chromedriver')
+driver = webdriver.Chrome('/home/webscraping/chromedriver')
 
 driver.get('https://www.flipkart.com/search?q=laptop&sid=6bo%2Cb5g&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&as-pos=1&as-type=HISTORY&suggestionId=laptop%7CLaptops&requestId=08bbb6d0-adb2-45de-b9fe-04c740bb2a53')
 
@@ -85,6 +85,6 @@ while True:
 a = {'image':Img,'Product': Products,'rating':ratings ,'Price': Prices,'Reviews':review,'specification':specification,'Original_prices':Original_price,'percentage':percentage}
 df = pd.DataFrame.from_dict(a, )
 # print(df)
-df.to_csv("/home/abhay/webscraping/output.csv",index=True,encoding='utf-8')
-df1 = pd.read_csv('/home/abhay/webscraping/output.csv')
-df1.to_json('/home/abhay/webscraping/data.json' ,orient="records")
+df.to_csv("/home/webscraping/output.csv",index=True,encoding='utf-8')
+df1 = pd.read_csv('/home/webscraping/output.csv')
+df1.to_json('/home/webscraping/data.json' ,orient="records")
